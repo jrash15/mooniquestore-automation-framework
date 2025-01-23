@@ -1,0 +1,8 @@
+{
+  "HOME_PAGE_ICON": {
+    "xpath": "//a[@class='header__icon header__icon--account link focus-inset small-hide']"
+  },
+  "SEARCH_ICON": {
+    "xpath": "(//*[name()='svg'][@class='modal__toggle-open icon icon-search'])[1]"
+  }
+}
