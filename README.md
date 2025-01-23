@@ -1,0 +1,1 @@
+# mooniquestore-automation-framework
