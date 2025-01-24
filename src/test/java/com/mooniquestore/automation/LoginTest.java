@@ -1,5 +1,6 @@
 package com.mooniquestore.automation;
 
+import com.mooniquestore.CsvDataProvider;
 import com.mooniquestore.pom.implementation.UserAccountPageImpl;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,7 +8,7 @@ import com.mooniquestore.pom.implementation.LogInPageImpl;
 
 public class LoginTest extends MSBaseTest  {
 
-    @Test
+    @Test(dataProvider = "CsvDataProvider", dataProviderClass =  CsvDataProvider.class)
     public void positiveLogInTest() {
         LogInPageImpl logInPageImpl = new LogInPageImpl(driver);
         UserAccountPageImpl userAccountPage = new UserAccountPageImpl(driver);
