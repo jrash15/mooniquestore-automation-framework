@@ -21,7 +21,7 @@ public class LogInPageImpl extends BasePageObject<LogInPageImpl> {
 
     public void fillUpEmailAndPassword(String email, String password) {
         type(email, emailField);
-        type(email, passwordField);
+        type(password, passwordField);
     }
 
     public UserAccountPageImpl selectSignInButton() {
