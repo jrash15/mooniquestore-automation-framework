@@ -1,5 +1,6 @@
 package com.mooniquestore.automation;
 
+import com.mooniquestore.BrowserFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,7 @@ public class MSBaseTest {
     @BeforeMethod
     public void beforeMethod(String browser) {
         LOGGER.info("*** Before Method ***");
+        driver = BrowserFactory.getDriver(browser);
         driver.get("https://mooniquestore.com/");
     }
 

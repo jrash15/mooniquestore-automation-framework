@@ -7,7 +7,8 @@ import org.openqa.selenium.safari.SafariDriver;
 public class BrowserFactory {
 
     public static WebDriver getDriver(String browser) {
-        WebDriver driver = null;
+        WebDriver driver;
+
         switch (browser) {
             case "safari":
                 System.setProperty("webdriver.gecko.driver", "src/main/resources/...");
@@ -20,7 +21,7 @@ public class BrowserFactory {
                 break;
 
             default:
-                System.setProperty("webdriver.gecko.driver", "src/main/resources/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
                 driver = new ChromeDriver();
                 break;
         }
