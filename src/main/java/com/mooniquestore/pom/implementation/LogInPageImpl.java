@@ -24,12 +24,13 @@ public class LogInPageImpl extends BasePageObject<LogInPageImpl> {
         type(email, passwordField);
     }
 
-
     public UserAccountPageImpl selectSignInButton() {
         select(signInButton);
         return new UserAccountPageImpl(driver);
     }
 
-
+    public boolean isSignInButtonDisplayed() {
+        return isDisplayed(signInButton);
+    }
 
 }

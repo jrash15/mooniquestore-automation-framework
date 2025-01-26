@@ -27,6 +27,7 @@ public class LoginTest extends MSBaseTest  {
         //Step 2: Use email and password to log in
         logInPageImpl.fillUpEmailAndPassword("jafarzadehrashad@gmail.com", "Enver2018@!");
         //Step 3: Select Sign in Button and wait for page
+        Assert.assertTrue(logInPageImpl.isSignInButtonDisplayed(), "SignIn button not displayed.");
         logInPageImpl.selectSignInButton();
         userAccountPage.waitPageUntilLoading();
         //Step 4: Verify Account page

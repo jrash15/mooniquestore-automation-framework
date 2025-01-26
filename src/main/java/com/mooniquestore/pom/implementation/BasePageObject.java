@@ -36,6 +36,10 @@ public class BasePageObject<T> {
         find(element).click();
     }
 
+    protected boolean isDisplayed(By element) {
+        return find(element).isDisplayed();
+    }
+
     protected void waitForPageLoading(By locator, Integer... timeOutInSecond) {
         int attempts = 0;
         while (attempts < 2) {
