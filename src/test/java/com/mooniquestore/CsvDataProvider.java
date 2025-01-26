@@ -14,7 +14,7 @@ public class CsvDataProvider {
 
     @DataProvider(name = "CsvDataProvider")
     public static Iterator<Object[]> provideData(Method method) {
-        List<Object[]> list = new ArrayList<Object[]>(); //src/test/resources/test_data/LogInTest_negativeLogInTest.csv
+        List<Object[]> list = new ArrayList<Object[]>();
 
         String pathname = "src" + File.separator + "test" + File.separator + "resources" + File.separator + "test_data" +
                 File.separator + method.getDeclaringClass().getSimpleName() + "_" + method.getName() + ".csv";
