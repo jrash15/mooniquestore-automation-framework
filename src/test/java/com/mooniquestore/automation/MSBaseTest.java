@@ -1,11 +1,13 @@
 package com.mooniquestore.automation;
 
+import com.mooniquestore.BrowserFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class MSBaseTest {
@@ -14,8 +16,9 @@ public class MSBaseTest {
 
     @Parameters({"browser"})
     @BeforeMethod
-    public void beforeMethod(String browser) {
+    public void beforeMethod(@Optional("chrome") String browser) {
         LOGGER.info("*** Before Method ***");
+        driver = BrowserFactory.getDriver(browser);
         driver.get("https://mooniquestore.com/");
     }
 
