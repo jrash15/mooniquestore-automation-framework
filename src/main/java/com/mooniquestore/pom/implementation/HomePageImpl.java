@@ -20,7 +20,7 @@ public class HomePageImpl extends MSBasePage implements HomePage {
 
     @Override
     public boolean isOnHomePage() {
-//        LOGGER.info("Verifying if on home page icon...");
+        LOGGER.info("Verifying if on home page icon...");
         return driver.isDisplayed(By.xpath("//*[@class='header__icon header__icon--account link focus-inset small-hide']"));
 //        return driver.isDisplayed(homeLocators.get(HomeLocators.Key.HOME_PAGE_ICON));
     }

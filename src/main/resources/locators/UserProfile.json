@@ -1,0 +1,8 @@
+{
+  "MY_PROFILE_TAB": {
+    "xpath": "//span[contains(text(),'My profile')]"
+  },
+  "ACCOUNT_OWNER_NAME": {
+    "xpath": "//div[@class='frcp-nav__first-name']"
+  }
+}
