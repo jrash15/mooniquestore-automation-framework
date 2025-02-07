@@ -14,8 +14,11 @@ public abstract class AbstractLocator {
     private String locatorFilePath;
     private Map<String, JSONObject> locators;
 
-    protected AbstractLocator(String locatorRootDirectory, String jsonFileName) {
+    protected AbstractLocator(String locatorRootDirectory, Enum key, String jsonFileName) {
         this.locators = loadLocators(locatorRootDirectory, jsonFileName);
+    }
+
+    public AbstractLocator(String string) {
     }
 
     private Map<String, JSONObject> loadLocators(String rootDirectory, String jsonFileName) {

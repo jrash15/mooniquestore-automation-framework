@@ -7,14 +7,14 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
-
+//src/main/java/com/mooniquestore/locators/HomeLocators.java
 public class HomeLocators extends AbstractLocator {
     public static final String HOME_JSON = "locators.json";
     private Map<String, JSONObject> locators;
 
     // Constructor to initialize the locators
-    public HomeLocators(Path locatorRootDirectory) {
-        super(locatorRootDirectory.toAbsolutePath().toString(), HOME_JSON);
+    public HomeLocators(Path locatorRootDirectory, Enum key) {
+        super(locatorRootDirectory.toAbsolutePath().toString(), key, HOME_JSON);
         this.locators = loadLocators(locatorRootDirectory.resolve(HOME_JSON));
     }
 
